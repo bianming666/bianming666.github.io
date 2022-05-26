@@ -79,7 +79,7 @@
             background: "#FFF",
             padding: 10,
             text: text,
-          })/*.hide()*/;
+          }).hide();
           /* var qrcode = $('#qrcode').qrcode(utf16to8($.trim($("#str").text()))).hide();*/
           var canvas = qrcode.find('canvas').get(0);
           var img = new Image();
@@ -97,7 +97,7 @@
             ctx.textAlign='center';
             ctx.fillText("全民",150,10);
             ctx.drawImage(img,0,30);
-           
+           $('#imgOne').attr('src',canvas.toDataURL('image/jpg'));
             
           }
           
@@ -123,6 +123,7 @@
             ctx.textAlign='center';
             ctx.fillText("回来了",textleft,texttop);
             ctx.drawImage(img,0,0);
+	   
           }*/
      
        $("#qrcode_h").keyup(function () {
